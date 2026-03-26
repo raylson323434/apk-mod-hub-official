@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APKModHub - Melhores Mods Android</title>
     <style>
-        /* CONFIGURAÇÕES GERAIS */
+        /* CONFIGURAÃ‡Ã•ES GERAIS */
         * {
             margin: 0;
             padding: 0;
@@ -78,7 +78,6 @@
             width: 100%;
             max-width: 1200px;
             gap: 25px;
-            /* Responsividade: 1 coluna mobile, 2 tablet, 3+ desktop */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             margin-bottom: 50px;
         }
@@ -114,7 +113,7 @@
         }
 
         .app-name {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #fff;
             margin-bottom: 8px;
@@ -125,10 +124,17 @@
             background: rgba(160, 32, 240, 0.15);
             padding: 4px 12px;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             display: inline-block;
+        }
+
+        .app-mod-info {
+            color: #00ff41; /* Verde para destacar o Mod */
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .download-btn {
@@ -152,7 +158,6 @@
             transform: scale(1.02);
         }
 
-        /* FOOTER */
         footer {
             margin-top: auto;
             padding: 20px;
@@ -171,7 +176,7 @@
 
     <header>
         <h1>APKModHub</h1>
-        <p>Os melhores aplicativos modificados para Android, rápidos e seguros.</p>
+        <p>Os melhores aplicativos modificados para Android, rÃ¡pidos e seguros.</p>
     </header>
 
     <div class="search-container">
@@ -181,30 +186,10 @@
     <div class="app-grid" id="appGrid">
         
         <div class="app-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Mod" class="app-icon">
-            <div class="app-name">WhatsApp Mod</div>
-            <div class="app-version">v10.5</div>
-            <button class="download-btn">Baixar</button>
-        </div>
-
-        <div class="app-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Mod" class="app-icon">
-            <div class="app-name">Spotify Premium</div>
-            <div class="app-version">v8.9</div>
-            <button class="download-btn">Baixar</button>
-        </div>
-
-        <div class="app-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Mod" class="app-icon">
-            <div class="app-name">Instagram Pro</div>
-            <div class="app-version">v32.0</div>
-            <button class="download-btn">Baixar</button>
-        </div>
-
-        <div class="app-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Vanced" class="app-icon">
-            <div class="app-name">YouTube Vanced</div>
-            <div class="app-version">v19.1</div>
+            <img src="https://www.apkmirror.com/wp-content/themes/APKMirror/images/apple-touch-icon.png" alt="APKMirror Installer" class="app-icon">
+            <div class="app-name">APKMirror Installer (beta)</div>
+            <div class="app-version">v2.0.3 (41-d04e542)</div>
+            <div class="app-mod-info">Mod: Sem anÃºncios</div>
             <button class="download-btn">Baixar</button>
         </div>
 
@@ -215,7 +200,6 @@
     </footer>
 
     <script>
-        // Função simples para busca real
         function searchApp() {
             let input = document.getElementById('appSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('app-card');
