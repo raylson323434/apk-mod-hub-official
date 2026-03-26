@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKModHub - Melhores Mods Android</title>
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        header h1 {
+            color: #a020f0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(160, 32, 240, 0.8);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #888;
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+
+        /* BARRA DE PESQUISA */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 18px 25px;
+            background-color: #151515;
+            border: 2px solid #a020f0;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(160, 32, 240, 0.1);
+        }
+
+        .search-container input:focus {
+            box-shadow: 0 0 25px rgba(160, 32, 240, 0.6);
+            background-color: #1a1a1a;
+        }
+
+        /* GRID DE APLICATIVOS */
+        .app-grid {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            gap: 25px;
+            /* Responsividade: 1 coluna mobile, 2 tablet, 3+ desktop */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin-bottom: 50px;
+        }
+
+        /* CARD DO APP */
+        .app-card {
+            background-color: #141414;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            border-color: #a020f0;
+            box-shadow: 0 10px 30px rgba(160, 32, 240, 0.3);
+        }
+
+        .app-icon {
+            width: 90px;
+            height: 90px;
+            background-color: #222;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 1px solid #444;
+        }
+
+        .app-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .app-version {
+            color: #a020f0;
+            background: rgba(160, 32, 240, 0.15);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .download-btn {
+            width: 100%;
+            background-color: #a020f0;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #b040f5;
+            box-shadow: 0 0 15px rgba(160, 32, 240, 0.6);
+            transform: scale(1.02);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer span {
+            color: #a020f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>APKModHub</h1>
+        <p>Os melhores aplicativos modificados para Android, rápidos e seguros.</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="appSearch" placeholder="Pesquisar aplicativos..." onkeyup="searchApp()">
+    </div>
+
+    <div class="app-grid" id="appGrid">
+        
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Mod" class="app-icon">
+            <div class="app-name">WhatsApp Mod</div>
+            <div class="app-version">v10.5</div>
+            <button class="download-btn">Baixar</button>
+        </div>
+
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Mod" class="app-icon">
+            <div class="app-name">Spotify Premium</div>
+            <div class="app-version">v8.9</div>
+            <button class="download-btn">Baixar</button>
+        </div>
+
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Mod" class="app-icon">
+            <div class="app-name">Instagram Pro</div>
+            <div class="app-version">v32.0</div>
+            <button class="download-btn">Baixar</button>
+        </div>
+
+        <div class="app-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Vanced" class="app-icon">
+            <div class="app-name">YouTube Vanced</div>
+            <div class="app-version">v19.1</div>
+            <button class="download-btn">Baixar</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <span>APKModHub</span> - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função simples para busca real
+        function searchApp() {
+            let input = document.getElementById('appSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('app-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].querySelector('.app-name').innerText.toLowerCase();
+                if (name.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
